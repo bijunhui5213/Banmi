@@ -1,14 +1,14 @@
 package com.example.youfeadaway.banmi.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
 import com.example.youfeadaway.banmi.R;
-import com.example.youfeadaway.banmi.adapter.VpAdapter;
 import com.example.youfeadaway.banmi.base.SimplActivity;
 import com.example.youfeadaway.banmi.fragment.AFragment;
 import com.example.youfeadaway.banmi.fragment.BFragment;
@@ -23,18 +23,44 @@ import butterknife.ButterKnife;
 public class MainActivity extends SimplActivity {
 
 
-    @BindView(R.id.tab)
-    TabLayout tab;
     @BindView(R.id.rel)
     RelativeLayout rel;
     @BindView(R.id.vp)
     ViewPager vp;
+    @BindView(R.id.bt1)
+    RadioButton bt1;
+    @BindView(R.id.bt2)
+    RadioButton bt2;
+    @BindView(R.id.bt3)
+    RadioButton bt3;
+    @BindView(R.id.bt4)
+    RadioButton bt4;
+    @BindView(R.id.rg)
+    RadioGroup rg;
 
     private ArrayList<Fragment> fragments;
 
     @Override
     protected void initData() {
-
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.bt1:
+                        vp.setCurrentItem(0);
+                        break;
+                    case R.id.bt2:
+                        vp.setCurrentItem(1);
+                        break;
+                    case R.id.bt3:
+                        vp.setCurrentItem(2);
+                        break;
+                    case R.id.bt4:
+                        vp.setCurrentItem(3);
+                        break;
+                }
+            }
+        });
 
     }
 
@@ -45,31 +71,7 @@ public class MainActivity extends SimplActivity {
         fragments.add(new BFragment());
         fragments.add(new CFragment());
         fragments.add(new DFragment());
-        VpAdapter vpAdapter = new VpAdapter(getSupportFragmentManager(), fragments);
-        vp.setAdapter(vpAdapter);
-        tab.addTab(tab.newTab().setText(R.string.a).setIcon(R.drawable.select_a));
-        tab.addTab(tab.newTab().setText(R.string.b).setIcon(R.drawable.select_b));
-        tab.addTab(tab.newTab().setText(R.string.c).setIcon(R.drawable.select_c));
-        tab.addTab(tab.newTab().setText(R.string.d).setIcon(R.drawable.selcet_d));
-        tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
 
-
-                vp.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-        vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
     }
 
 

@@ -10,21 +10,69 @@
         android:id="@+id/rel"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_58"
-        android:background="@color/e3e3e3"
-        android:layout_alignParentTop="true"></RelativeLayout>
+        android:layout_alignParentTop="true"
+        android:background="@color/e3e3e3"></RelativeLayout>
 
     <com.example.youfeadaway.banmi.custom.CustomViewPager
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/tab"
+        android:layout_above="@id/rg"
         android:layout_below="@id/rel"></com.example.youfeadaway.banmi.custom.CustomViewPager>
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
+    <RadioGroup
+       android:gravity="center"
         android:background="@color/e3e3e3"
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        app:tabIndicatorHeight="@dimen/dp_0"></android.support.design.widget.TabLayout>
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+
+        <RadioButton
+            android:textColor="@drawable/color_a"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/a"
+           android:drawableTop="@drawable/select_a"
+            android:id="@+id/bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null" />
+
+        <RadioButton
+            android:textColor="@drawable/color_a"
+            android:gravity="center"
+            android:text="@string/b"
+            android:drawableTop="@drawable/select_b"
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null" />
+
+        <RadioButton
+            android:textColor="@drawable/color_a"
+            android:gravity="center"
+            android:text="@string/c"
+            android:drawableTop="@drawable/select_c"
+            android:id="@+id/bt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null" />
+
+        <RadioButton
+            android:textColor="@drawable/color_a"
+            android:gravity="center"
+            android:text="@string/d"
+            android:drawableTop="@drawable/selcet_d"
+            android:id="@+id/bt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null" />
+
+    </RadioGroup>
 </RelativeLayout>
