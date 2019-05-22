@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Banmi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="a">怎么玩</string>
+    <string name="b">发现</string>
+    <string name="c">关注</string>
+    <string name="d">我的</string>
 </resources>

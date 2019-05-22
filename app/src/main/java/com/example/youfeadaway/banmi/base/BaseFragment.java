@@ -8,6 +8,7 @@ public abstract class BaseFragment<V, P extends BasePresenter<V>> extends SimplA
     public P presenter;
 
     @Override
+
     protected void createView(View inflate) {
         presenter = createPresenter();
         presenter.bind((V) this);

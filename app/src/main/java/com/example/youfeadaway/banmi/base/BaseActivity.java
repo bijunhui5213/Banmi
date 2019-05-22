@@ -7,8 +7,7 @@ public abstract class BaseActivity<V, P extends BasePresenter<V>> extends SimplA
     public P presenter;
 
     @Override
-    public void createView(View inflate) {
-        presenter = createPresenter();
+    public void createView(View inflate) {        presenter = createPresenter();
         presenter.bind((V) this);
     }
 
