@@ -11,4 +11,6 @@
     <color name="orange">#FA6A13</color>
     <color name="c_fa6a13">#fa6a13</color>
     <color name="c_ff9d53">#ff9d53</color>
+    <color name="grey">#BFBFBF</color>
+    <color name="transport">#00ffffff</color>
 </resources>

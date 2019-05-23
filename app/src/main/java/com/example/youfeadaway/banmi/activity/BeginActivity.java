@@ -42,7 +42,7 @@ public class BeginActivity extends AppCompatActivity {
             public void onAnimationEnd(Animation animation) {
                 boolean iscom = (boolean) SpUtil.getParam("iscom", false);
                 if (iscom) {
-                    Intent intent = new Intent(BeginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(BeginActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 } else {
