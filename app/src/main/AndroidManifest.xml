@@ -12,12 +12,17 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity"
             android:theme="@style/NoTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+
+    <activity android:name=".activity.BeginActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".activity.WelComeActivity"></activity>
     </application>
 
 </manifest>

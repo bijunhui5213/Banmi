@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 
 import com.example.youfeadaway.banmi.R;
+import com.example.youfeadaway.banmi.adapter.VpAdapter;
 import com.example.youfeadaway.banmi.base.SimplActivity;
 import com.example.youfeadaway.banmi.fragment.AFragment;
 import com.example.youfeadaway.banmi.fragment.BFragment;
@@ -71,6 +72,8 @@ public class MainActivity extends SimplActivity {
         fragments.add(new BFragment());
         fragments.add(new CFragment());
         fragments.add(new DFragment());
+        VpAdapter vpAdapter = new VpAdapter(getSupportFragmentManager(), fragments);
+        vp.setAdapter(vpAdapter);
 
     }
 
