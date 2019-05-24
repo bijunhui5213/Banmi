@@ -9,16 +9,19 @@
     <RelativeLayout
         android:id="@+id/rel"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_58"
-        android:layout_alignParentTop="true"
-        android:background="@color/e3e3e3"></RelativeLayout>
+        android:layout_height="@dimen/dp_40"
+        android:padding="@dimen/dp_10"
+        android:elevation="@dimen/dp_5"
+        android:background="@drawable/person">
+    </RelativeLayout>
 
     <com.example.youfeadaway.banmi.custom.CustomViewPager
         android:id="@+id/vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/rg"
-        android:layout_below="@id/rel"></com.example.youfeadaway.banmi.custom.CustomViewPager>
+        android:layout_below="@id/rel">
+    </com.example.youfeadaway.banmi.custom.CustomViewPager>
 
     <RadioGroup
        android:gravity="center"
