@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    android:id="@+id/rell"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/orange"
+        android:layout_marginTop="@dimen/dp_73"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:text="你好,为了获取更好的服务"
+        android:layout_width="@dimen/dp_201"
+        android:layout_height="@dimen/dp_22" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_marginTop="@dimen/dp_104"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:text="请登录伴米旅行"
+        android:textSize="@dimen/sp_28"
+        android:layout_width="@dimen/dp_198"
+        android:layout_height="@dimen/dp_38" />
+
+    <TextView
+        android:id="@+id/tv_gg"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_above="@id/tv1"
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:text="随便逛逛 >>"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="@dimen/dp_70"
+        android:id="@+id/tv1"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:text="登录或注册即同意伴米旅行"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_agreement"
+        android:layout_alignBottom="@id/tv1"
+        android:layout_toRightOf="@id/tv1"
+        android:text="用户协议"
+        android:textColor="@color/orange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <LinearLayout
+        android:padding="@dimen/dp_5"
+        android:id="@+id/ll"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:drawableLeft="@mipmap/wechat"
+            android:textColor="#12CC1D"
+            android:id="@+id/bt_login_wechat"
+            android:background="@drawable/bt_bg"
+            android:text="微信登录"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_40" />
+        <Button
+            android:paddingLeft="@dimen/dp_10"
+            android:drawableLeft="@mipmap/wb"
+            android:layout_marginTop="@dimen/dp_25"
+            android:textColor="#E33F3F"
+            android:id="@+id/bt_login_wb"
+            android:background="@drawable/bt_bg"
+            android:text="微博登录"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_40" />
+
+        <Button
+            android:paddingLeft="@dimen/dp_13"
+            android:drawableLeft="@mipmap/phone"
+            android:layout_marginTop="@dimen/dp_25"
+            android:textColor="@color/orange"
+            android:id="@+id/bt_login_phone"
+            android:background="@drawable/bt_bg"
+            android:text="手机号登录"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_40" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

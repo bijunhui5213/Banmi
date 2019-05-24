@@ -9,21 +9,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/NoTheme">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@style/NoTheme">
+            android:theme="@style/NoTheme" />
+        <activity android:name=".activity.BeginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MineActivity.PersonActivity" />
-        <activity android:name=".activity.MineActivity.UpNameActivity" />
-        <activity android:name=".activity.MineActivity.UpQianMingActivity" />
-        <activity android:name=".activity.MineActivity.ImgActivity" />
-        <activity android:name=".activity.MineActivity.AccountActivity"></activity>
+        <activity android:name=".activity.WelComeActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.C_DetailsActivity" />
+        <activity android:name=".activity.C_ImgActivity"></activity>
     </application>
 
 </manifest>

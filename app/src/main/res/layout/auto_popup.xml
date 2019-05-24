@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_300">
+    <TextView
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:id="@+id/tv_auto"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:drawableLeft="@mipmap/phone"
+        android:drawableRight="@mipmap/select"
+        android:text="+86"
+        android:layout_width="@dimen/dp_64"
+        android:layout_height="@dimen/dp_20" />
+    <EditText
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/et_auth"
+        android:paddingLeft="@dimen/dp_70"
+        android:hint="请输入验证码"
+        android:background="@drawable/et_bg"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="wrap_content" />
+    <View
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/view"
+        android:background="@color/orange"
+        android:layout_width="@dimen/dp_329"
+        android:layout_height="@dimen/dp_1" />
+
+    <Button
+        app:layout_constraintRight_toRightOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        android:id="@+id/bt_auto"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:text="发送验证码"
+        android:background="@drawable/bg_auto"
+        android:textColor="@color/white"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_30" />
+</android.support.constraint.ConstraintLayout>
