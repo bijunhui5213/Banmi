@@ -15,6 +15,14 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        signingConfigs {
+            debug {
+                storeFile file('debug.keystore')
+                storePassword "android"
+                keyAlias "androiddebugkey"
+                keyPassword "android"
+            }
+        }
     }
     productFlavors {
     }
@@ -52,4 +60,12 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     //日历
     implementation 'com.prolificinteractive:material-calendarview:1.4.3'
+    implementation files('libs/umeng-common-2.0.2.jar')
+    implementation files('libs/umeng-analytics-8.0.2.jar')
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
 }

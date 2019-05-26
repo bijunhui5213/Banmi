@@ -22,6 +22,7 @@ import butterknife.BindView;
 
 public class MainActivity extends SimplActivity {
 
+    //5ce7f53b3fc195c17e0010b8
 
     @BindView(R.id.rel)
     RelativeLayout rel;
