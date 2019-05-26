@@ -11,7 +11,7 @@ import android.widget.RelativeLayout;
 import com.example.youfeadaway.banmi.R;
 import com.example.youfeadaway.banmi.adapter.VpAdapter;
 import com.example.youfeadaway.banmi.base.SimplActivity;
-import com.example.youfeadaway.banmi.fragment.AFragment;
+import com.example.youfeadaway.banmi.fragment.A.AFragment;
 import com.example.youfeadaway.banmi.fragment.BFragment;
 import com.example.youfeadaway.banmi.fragment.CFragment;
 import com.example.youfeadaway.banmi.fragment.DFragment;

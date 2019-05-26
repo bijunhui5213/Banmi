@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.youfeadaway.banmi">
 
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:name=".base.BaseApp"
         android:allowBackup="true"
@@ -23,10 +30,13 @@
         <activity android:name=".activity.WelComeActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.C_DetailsActivity" />
-        <activity android:name=".activity.C_ImgActivity">
-            <category android:name="android.intent.category.LAUNCHER" />
-    </activity>
-
+        <activity android:name=".activity.C_ImgActivity"></activity>
+        <activity android:name=".activity.MineActivity.AccountActivity"/>
+        <activity android:name=".activity.MineActivity.ImgActivity"/>
+        <activity android:name=".activity.MineActivity.PersonActivity"/>
+        <activity android:name=".activity.MineActivity.UpNameActivity"/>
+        <activity android:name=".activity.MineActivity.UpQianMingActivity"/>
+        <activity android:name=".fragment.A.WebActivity"/>
         <!--三方登录-->
         <activity
             android:name="com.umeng.socialize.media.WBShareCallBackActivity"
@@ -50,7 +60,11 @@
                 <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
         </activity>
+
+
+
     </application>
 
 </manifest>

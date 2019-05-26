@@ -110,7 +110,8 @@ public class LoginActivity extends SimplActivity {
 
             }
             Toast.makeText(LoginActivity.this, "成功了", Toast.LENGTH_LONG).show();
-
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
         }
 
         /**
@@ -135,7 +136,6 @@ public class LoginActivity extends SimplActivity {
             Toast.makeText(LoginActivity.this, "取消了", Toast.LENGTH_LONG).show();
         }
     };
-
     private void showPopup() {
         View view = LayoutInflater.from(this).inflate(R.layout.auto_popup, null);
 
@@ -147,11 +147,5 @@ public class LoginActivity extends SimplActivity {
         popupWindow.setOutsideTouchable(false);*/
 
         popupWindow.showAsDropDown(tv2,0,150);
-
-
-
-
-
-
     }
 }
