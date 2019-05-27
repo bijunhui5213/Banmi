@@ -54,6 +54,15 @@
             android:theme="@style/NoTheme" />
         <activity android:name=".activity.topactivity.MailActivity" />
         <activity android:name=".activity.topactivity.SettingActivity"></activity>
+        <activity android:name=".activity.MineActivity.UpQianMingActivity"></activity>
+        <activity android:name=".activity.MineActivity.AccountActivity"></activity>
+        <activity android:name=".activity.MineActivity.ImgActivity"></activity>
+        <activity android:name=".activity.MineActivity.PersonActivity"></activity>
+        <activity android:name=".activity.MineActivity.UpNameActivity"></activity>
+
+
+
+
 
         <!--baidu map start-->
         <meta-data
