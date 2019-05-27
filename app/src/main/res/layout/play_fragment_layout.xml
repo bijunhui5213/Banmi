@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="335dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="335dp"
+        android:layout_height="450dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="@dimen/dp_1"
+        app:cardElevation="@dimen/dp_1"
+        app:cardMaxElevation="@dimen/dp_1"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_item">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/img_circle"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_116"
+                android:background="#22000000">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_116"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="#99FFFFFF" />
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:text="日本·四国地区"
+                    android:textColor="#FF373737"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25sp"
+                    android:layout_below="@id/city"
+                    android:layout_margin="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:maxHeight="@dimen/dp_50"
+                    android:text="濑户内海艺术双岛"
+                    android:textColor="#FF636363"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_margin="@dimen/dp_5"
+                    android:text="直岛·丰岛美术馆巡礼"
+                    android:textColor="#FF373737"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/money"
+                    android:layout_width="@dimen/dp_74"
+                    android:layout_height="@dimen/dp_29"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/button_circle"
+                    android:gravity="center"
+                    android:text="$1.9"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_17"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/money"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:text=""
+                    android:textColor="#636363"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

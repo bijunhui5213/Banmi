@@ -9,10 +9,66 @@
     <RelativeLayout
         android:id="@+id/rel"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_40"
-        android:padding="@dimen/dp_10"
+        android:layout_height="@dimen/dp_50"
+        android:background="@drawable/person"
         android:elevation="@dimen/dp_5"
-        android:background="@drawable/person">
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_dingwei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/icon_dingwei_home"
+            android:gravity="center_vertical"
+            android:text=" 东京"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/setinghui"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lv_sousuo"
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:background="@drawable/yuanhu"
+            android:padding="@dimen/dp_4"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_22"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:src="@mipmap/sousuoa" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:hint="目的地,伴米名称" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/xinfeng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/message" />
+
+
     </RelativeLayout>
 
     <com.example.youfeadaway.banmi.custom.CustomViewPager
@@ -20,62 +76,61 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/rg"
-        android:layout_below="@id/rel">
-    </com.example.youfeadaway.banmi.custom.CustomViewPager>
+        android:layout_below="@id/rel" />
 
     <RadioGroup
-       android:gravity="center"
-        android:background="@color/e3e3e3"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
         android:id="@+id/rg"
         android:layout_width="match_parent"
-        android:layout_height="58dp">
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/e3e3e3"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <RadioButton
-            android:textColor="@drawable/color_a"
-            android:checked="true"
-            android:gravity="center"
-            android:text="@string/a"
-           android:drawableTop="@drawable/select_a"
             android:id="@+id/bt1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:button="@null" />
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/select_a"
+            android:gravity="center"
+            android:text="@string/a"
+            android:textColor="@drawable/color_a" />
 
         <RadioButton
-            android:textColor="@drawable/color_a"
-            android:gravity="center"
-            android:text="@string/b"
-            android:drawableTop="@drawable/select_b"
             android:id="@+id/bt2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:button="@null" />
+            android:button="@null"
+            android:drawableTop="@drawable/select_b"
+            android:gravity="center"
+            android:text="@string/b"
+            android:textColor="@drawable/color_a" />
 
         <RadioButton
-            android:textColor="@drawable/color_a"
-            android:gravity="center"
-            android:text="@string/c"
-            android:drawableTop="@drawable/select_c"
             android:id="@+id/bt3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:button="@null" />
+            android:button="@null"
+            android:drawableTop="@drawable/select_c"
+            android:gravity="center"
+            android:text="@string/c"
+            android:textColor="@drawable/color_a" />
 
         <RadioButton
-            android:textColor="@drawable/color_a"
-            android:gravity="center"
-            android:text="@string/d"
-            android:drawableTop="@drawable/selcet_d"
             android:id="@+id/bt4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:button="@null" />
+            android:button="@null"
+            android:drawableTop="@drawable/selcet_d"
+            android:gravity="center"
+            android:text="@string/d"
+            android:textColor="@drawable/color_a" />
 
     </RadioGroup>
 </RelativeLayout>

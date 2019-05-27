@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_12"
+    tools:context="com.example.youfeadaway.banmi.activity.topactivity.SouSuoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_30">
+
+        <LinearLayout
+            android:id="@+id/lv_sousuo"
+            android:layout_width="@dimen/dp_280"
+            android:layout_height="@dimen/dp_38"
+            android:background="@drawable/yuanhu"
+            android:padding="@dimen/dp_4"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="@dimen/dp_22"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:src="@mipmap/sousuoa" />
+
+            <EditText
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:hint="目的地,伴米名称" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/quxiao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="取消"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/sp_16" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rtl_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="搜索历史" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="删除"
+            android:textColor="@color/orange" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/delete"
+            android:layout_marginTop="@dimen/dp_8"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热门主题" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="热门城市" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="大家都在搜" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>
