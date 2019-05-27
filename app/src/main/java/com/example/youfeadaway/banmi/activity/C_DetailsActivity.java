@@ -3,9 +3,14 @@ package com.example.youfeadaway.banmi.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -36,6 +41,7 @@ public class C_DetailsActivity extends SimplActivity {
     ImageView imgFengjing;
     @BindView(R.id.tv_time)
     TextView tvTime;
+    private PopupWindow popupWindow;
 
     @Override
     protected void initData() {
@@ -58,8 +64,25 @@ public class C_DetailsActivity extends SimplActivity {
         imgFengjing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(C_DetailsActivity.this, C_ImgActivity.class);
-                startActivity(intent);
+                View inflate1 = LayoutInflater.from(C_DetailsActivity.this).inflate(R.layout.activity_c__img, null);
+                RelativeLayout rl = inflate1.findViewById(R.id.rl);
+                ImageView imgs = inflate1.findViewById(R.id.imgs);
+                Glide.with(C_DetailsActivity.this).load(R.drawable.img3288).into(imgs);
+
+                popupWindow = new PopupWindow();
+                popupWindow.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
+                popupWindow.setHeight(ViewGroup.LayoutParams.MATCH_PARENT);
+                popupWindow.setContentView(inflate1);
+                popupWindow.setBackgroundDrawable(null);
+                popupWindow.setOutsideTouchable(true);
+
+                popupWindow.showAsDropDown(imgs, Gravity.CENTER_VERTICAL, 0, 0);
+                rl.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        popupWindow.dismiss();
+                    }
+                });
             }
         });
     }
